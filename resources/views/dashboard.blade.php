@@ -27,7 +27,7 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="space-y-4">
+            <div class="space-y-6">
                 @foreach ($quizzes as $quiz)
                     @php
                         $quizAttempts = $attempts->get($quiz->id) ?? collect();
@@ -42,7 +42,7 @@
                             : ($hasAttempted ? 'bg-blue-100 text-blue-700' : 'bg-gray-100 text-gray-700');
                     @endphp
 
-                    <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                    <div class="bg-white overflow-hidden border border-slate-200 shadow-sm ring-1 ring-slate-100 sm:rounded-lg transition-shadow hover:shadow-md">
                         <div class="p-6 text-gray-900">
                             <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
                                 <div>
